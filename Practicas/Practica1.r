@@ -1,6 +1,4 @@
-getwd()
-setwd("/home/danie/Documentos/mineria_datos/P2-Movie-Ratings.csv")
-getwd()
+
 
 # Importing the dataset
 dataset <- read.csv('P2-Movie-Ratings.cs')
