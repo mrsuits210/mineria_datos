@@ -1,6 +1,3 @@
-getwd()
-setwd("C:/Users/GitHub/DataMining/MachineLearning/MultipleLinearRegression")
-getwd()
 
 # Importing the dataset
 dataset <- read.csv('50_Startups.csv')
