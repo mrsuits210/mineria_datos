@@ -10,7 +10,8 @@ data = data[3:5]
 #transformamos nuestro valor 
 data$Purchased = factor(data$Purchased, levels = c(0, 1))
 
-#Divimos nuestro dataset en datso de entrenamientoy datos de testing para implementarlo en nuestro algoritmo
+#Dividimos nuestro dataset en datos de entrenamiento y datos de testing para implementarlo en nuestro algoritmo en este caso
+#75% de la data en datos de training y 35% en datos de test 
 library(caTools)
 set.seed(123)
 split = sample.split(data$Purchased, SplitRatio = 0.75)
@@ -22,7 +23,7 @@ test_set = subset(data, split == FALSE)
 training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 
-#cargamos nuestra liberria e1071 para implementar nuestro algoritmo naivebayes
+#cargamos nuestra liberia e1071 para implementar nuestro algoritmo naivebayes
 library(e1071)
 classifier = naiveBayes(x = training_set[-3],
                         y = training_set$Purchased)
